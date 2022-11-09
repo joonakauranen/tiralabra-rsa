@@ -5,3 +5,8 @@
 ## Viikkoraportit
 
 [Viikko1](https://github.com/joonakauranen/tiralabra-rsa/blob/main/dokumentaatio/viikkoraportit/Viikkoraportti1.md)
+
+## codecov
+
+Alla olevaa codecov-merkkiä klikkaamalla testikattavuusraporttiin
+[![codecov](https://codecov.io/gh/joonakauranen/tiralabra-rsa/branch/main/graph/badge.svg?token=0Z1448E5ED)](https://codecov.io/gh/joonakauranen/tiralabra-rsa)
