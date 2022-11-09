@@ -2,11 +2,11 @@
 
 Ensimmäisen viikon nähdäkseni tärkein asia oli sopivan aiheen valinta ja sen yksityiskohdista keskustelu ohjaajan kanssa. Sopivan aiheen valinnan ja sen hyväksymisen jälkeen aloitin aiheeseen perehtymisen. Lisäksi tein GitHub-repositorion ja valmistelin ohjelmointiympäristön. Myös määrittelydokumentti on laadittu.
 
-Ohjelma ei varsinaisen konkretian osalta ole edistynyt. Ainoastaan Gradle-projekti on luotu. Projektin luomisen ja tehdyn taustatyön myötä projektin koodaaminen voidaan aloittaa seuraavalla viikolla.
+Ohjelma ei varsinaisen konkretian osalta ole edistynyt. Ainoastaan Poetry-projekti on luotu. Projektin luomisen ja tehdyn taustatyön myötä projektin koodaaminen voidaan aloittaa seuraavalla viikolla.
 
 Opin yksityiskohtia kryptografiasta RSA-algoritmista tehdyn taustatyön myötä. Konseptitasolla uutta oli avainten luomisen prosessi ja esimerkiksi Miller-Rabin alkulukutesti. Mahdollisen SHA256-funktion toteutuksen tutkimisen yhteydessä opin, että RSA:ta ja SHA:ta voidaan käyttää yhdessä esim käyttötarkoituksiin, joissa tiedon muuttumattomuus halutaan todentaa pelkän tiivisteen perusteella.
 
-Mielestäni tässä vaiheessa ei ole tullut vastaan epäselvyyksiä. Vaikeuksia tuotti gradle-projektin luominen ja Gitin ja GitHubin synkronointi.
+Mielestäni tässä vaiheessa ei ole tullut vastaan epäselvyyksiä. Vaikeuksia tuotti gradle-projektin luominen ja pitkän tauon jälkeen tehty Gitin ja GitHubin synkronointi. Lopulta päädyin vielä viime hetkellä vaihtamaan ohjelmointikielen Pythoniin, koska sillä voidaan paremmin käsitellä hyvin suuria lukuja.
 
 Projektin toteutuksen etenemistä olen koodauksen osalta hahmotellut seuraavalla tavalla:
 
@@ -19,4 +19,4 @@ Projektin toteutuksen etenemistä olen koodauksen osalta hahmotellut seuraavalla
 
 Ensi viikon palautuksessa täytyy olla myös Javadocia, testausta, checkstyleä ja muuta, joten epäilen, että merkittävä osa ajasta kuluu myös näihin. Tavoite on, että koodi ja testaus kattavat ensi viikon jälkeen yllä mainituista kohdista kohdat 1-3.
 
-Käytetty aika: 7h
+Käytetty aika: 8h

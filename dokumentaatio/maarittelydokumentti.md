@@ -2,7 +2,7 @@
 
 Toteutetaan RSA-algoritmi. Mahdollisesti laajennetaan käyttämään SHA256-tiivistefunktiota. Projekti käyttää tekstikäyttöliittymää ja se ottaa syötteenä merkkijonon. Merkkijono voidaan salata ja purkaa RSA-algoritmia käyttäen. Mikäli aikaa riittää luodaan merkkijonosta ennen salausta tiiviste.
 
-Käytän projektin toteutukseen Javaa. Hallitsen Pythonia riittävän hyvin, jotta voin vertaisarvioida kyseiselle kielellä toteutettuja projekteja.
+Käytän projektin toteutukseen Pythonia. Hallitsen Javaa riittävän hyvin, jotta voin vertaisarvioida kyseiselle kielellä toteutettuja projekteja.
 
 Totetutan RSA-algoritmin ja Miller-Rabin algoritmin tarvittavien alkulukujen generointiin ja vahvistamiseen.
 
