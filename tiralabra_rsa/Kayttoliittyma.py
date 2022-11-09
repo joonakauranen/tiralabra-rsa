@@ -1,5 +1,6 @@
 import AvainGeneroija as avaingeneroija
 
+#testi
 
 class Kayttoliittyma:
     def __init__(self):
@@ -8,4 +9,3 @@ class Kayttoliittyma:
     def kaynnista(self):       
         print("***RSA-salaus***")
         salattava_merkkijono = input("Syötä salattava merkkijono:")
-        print(self.avain_generoija.alkulukujen_tulo)
