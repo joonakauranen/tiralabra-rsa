@@ -4,7 +4,7 @@ Projektin pääasiallinen rakenne on muodostunut ja tarvittavat luokat luotu. Av
 
 Tarkemmin ottaen avainten luonnin osalta on toteutettu Eulerin pii-funktio, Euklideen algoritmi, laajennettu Euklideen algoritmi ja modulaariaritmetiikan käänteisluvun tuottava algoritmi. Muut luokat ovat alkutekijöissään. GitHub actions on konfiguroitu ja se tuottaa codecov-raportin. Docstrings-dokumentointi on aloitettu ja koodin laadun seuraamiseen käytän paikallisesti Pylancea. Pylance/Pyright lisätään GitHub actionsiin.
 
-Tällä viikolla opin lisää yksityiskohtia kryptografiasta ja RSA-algoritmista. Opin käytettävää matematiikkaa ja ymmärsin miten julkinen avain ja salainen avain liittyvät toisiinsa. Lisäksi yleisellä tasolla hieman tarkemmin miten salaus, purku ja allekirjoittaminen toimivat RSA:n tapauksessa. Matemaattikan muuttaminen koodiksi selkeytyi ideana. Kertaus pytestin, pylancen, codecovin, GitHub actionsin jne käytöstä oli tervetullutta.
+Tällä viikolla opin lisää yksityiskohtia kryptografiasta ja RSA-algoritmista. Opin käytettävää matematiikkaa ja ymmärsin miten julkinen avain ja salainen avain liittyvät toisiinsa matemaattisesti. Lisäksi yleisellä tasolla hieman tarkemmin miten salaus, purku ja allekirjoittaminen toimivat RSA:n tapauksessa. Matemaattikan muuttaminen koodiksi selkeytyi ideana. Kertaus pytestin, pylancen, codecovin, GitHub actionsin jne käytöstä oli tervetullutta.
 
 Hieman epäselvyyttä on dokumentaation osalta. Nyt dokumentaatio on hyvin yleisluontoista eikä sisällä tietoa esim parametreistä tai siitä mitä metodit palauttavat. Tarkoitus on kuitenkin jatkossa alkaa käyttää jotain olemassaolevaa formaattia, esim [Googlen formaattia](https://github.com/google/styleguide/blob/gh-pages/pyguide.md#38-comments-and-docstrings)
 
