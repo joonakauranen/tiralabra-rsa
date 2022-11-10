@@ -10,6 +10,9 @@ class AvainGeneroija(object):
     """
 
     def __init__(self):
+
+        #init-metodi on epäselvä ja keskeneräinen, selkeentyy kun integroidaan alkuluvut luovaan luokkaan ja RSA-luokkaan
+
         self.luo_avain()
         self.julkinen_avain = ''
         self.salattu_avain = ''
@@ -21,11 +24,14 @@ class AvainGeneroija(object):
         self.salattu_eksponentti = self.maarita_salattu_eksponentti(self.julkinen_eksponentti, self.euler)
 
     def luo_avain(self):
+        #luo_avain-metodi on epäselvä ja keskeneräinen, selkeentyy kun integroidaan alkuluvut luovaan luokkaan ja RSA-luokkaan
+
+
         """
         Tätä metodia kutsumalla luodaan avaimet.
 
         Metodi kutsuu muita tarvittavia metodeita ja palauttaa avaimet.
-        Tässä vaiheessa luokan metodit ovat erillisiä ja tässä asetataan ennelta määrätyt alkuluvut
+        Tässä vaiheessa luokan metodit ovat erillisiä ja tässä asetataan ennalta määrätyt alkuluvut
         """
 
         self.eka_alkuluku = 17055899557196527525682810191339089909014331959812898993437334555169285087976951946809555356817674844913188193949144165887100694620944167618997411049745043243260854998720061941490491091205087788373487296637817044103762239946752241631032791287021875863785226376406279424552454153388492970310795447866569138481
