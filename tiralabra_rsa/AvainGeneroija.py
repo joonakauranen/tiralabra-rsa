@@ -14,14 +14,14 @@ class AvainGeneroija(object):
         #init-metodi on epäselvä ja keskeneräinen, selkeentyy kun integroidaan alkuluvut luovaan luokkaan ja RSA-luokkaan
 
         self.luo_avain()
-        self.julkinen_avain = ''
-        self.salattu_avain = ''
+        self.julkinen_avain
+        self.salattu_avain
         self.alkulukujen_tulo
-        self.euler = self.eulerin_pii_funktio(self.eka_alkuluku, self.toka_alkuluku)
+        self.euler
         self.eka_alkuluku
         self.toka_alkuluku
-        self.julkinen_eksponentti = self.maarita_julkinen_eksponentti()
-        self.salattu_eksponentti = self.maarita_salattu_eksponentti(self.julkinen_eksponentti, self.euler)
+        self.julkinen_eksponentti
+        self.salattu_eksponentti
 
     def luo_avain(self):
         #luo_avain-metodi on epäselvä ja keskeneräinen, selkeentyy kun integroidaan alkuluvut luovaan luokkaan ja RSA-luokkaan
@@ -37,7 +37,12 @@ class AvainGeneroija(object):
         self.eka_alkuluku = 17055899557196527525682810191339089909014331959812898993437334555169285087976951946809555356817674844913188193949144165887100694620944167618997411049745043243260854998720061941490491091205087788373487296637817044103762239946752241631032791287021875863785226376406279424552454153388492970310795447866569138481
         self.toka_alkuluku = 171994050316145327367864378293770397343246561147593187377005295591120640129800725892235968688434055779668692095961697434700708550594137135605048681344218643671046905252163983827396726536078773766353616572531688390937410451433665914394068509329532352022301339189851111636176939179510955519440490431177444857017
         self.alkulukujen_tulo = self.eka_alkuluku * self.toka_alkuluku
-        
+
+        self.euler = self.eulerin_pii_funktio(self.eka_alkuluku, self.toka_alkuluku)
+        self.julkinen_eksponentti = self.maarita_julkinen_eksponentti()
+        self.salattu_eksponentti = self.maarita_salattu_eksponentti(self.julkinen_eksponentti, self.euler)
+        self.julkinen_avain = (self.julkinen_eksponentti, self.alkulukujen_tulo)
+        self.salattu_avain = (self.salattu_eksponentti, self.alkulukujen_tulo)
         
     def eulerin_pii_funktio(self, luku_a, luku_b):
         """
@@ -118,3 +123,9 @@ class AvainGeneroija(object):
             x += m
         
         return x
+
+    def hae_julkinen_avain(self):
+        return self.julkinen_avain
+    
+    def hae_salattu_avain(self):
+        return self.salattu_avain
