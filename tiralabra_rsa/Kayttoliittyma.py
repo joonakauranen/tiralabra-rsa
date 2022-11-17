@@ -1,4 +1,4 @@
-import AvainGeneroija as avaingeneroija
+import RSA as rsa
 
 class Kayttoliittyma:
 
@@ -10,8 +10,13 @@ class Kayttoliittyma:
     """
     
     def __init__(self):
-        self.avain_generoija = avaingeneroija.AvainGeneroija()
+        self.rsa = rsa.RSA()
 
     def kaynnista(self):       
         print("***RSA-salaus***")
-        salattava_merkkijono = input("Syötä salattava merkkijono:")
+        salattava_merkkijono = int(input("Syötä salattava merkkijono:"))
+        salattu_merkkijono = self.rsa.salaa_merkkijono(salattava_merkkijono)
+        print(salattu_merkkijono)
+        print("____________________")
+        purettu_merkkijono = self.rsa.pura_merkkijono(salattu_merkkijono)
+        print(purettu_merkkijono)
