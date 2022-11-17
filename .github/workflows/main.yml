@@ -25,6 +25,8 @@ jobs:
         
       - name: Coverage report
         run: poetry run coverage xml
+      - name: Pylint
+        run: poetry run pylint tiralabra_rsa
         
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v1
