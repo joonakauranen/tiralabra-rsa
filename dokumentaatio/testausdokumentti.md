@@ -17,3 +17,11 @@ Kehitysympäristössä yksikkötestit suoritetaan GitHub Actionsin avulla. Muuto
 - tarvittaessa asenna poetry ```pip install poetry```
 - lisää projektin riippuvuudet ```poetry install```
 - aja testit ```poetry run pytest```
+
+### Testikattavuusraportti
+
+![Alt text](https://github.com/joonakauranen/tiralabra-rsa/blob/main/dokumentaatio/kuvat/coverage-raportti.png)
+
+### Integraatiotestaus
+
+Integraatiotestausta on tehty vähäisissä määrin tekstikäyttöliittymän avulla. Salaus ja purku toimivat hyvin. On kuitenkin syytä huomioida, että syötteen tulee olla pienempi kuin alkulukujen tulon.
