@@ -1,4 +1,4 @@
-import Kayttoliittyma as kliittyma
+import tiralabra_rsa.kayttoliittyma as kliittyma
 
 
 def main():
@@ -6,4 +6,5 @@ def main():
     kayttoliittyma.kaynnista()
 
 if __name__ == "__main__":
+
     main()

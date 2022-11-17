@@ -1,5 +1,5 @@
 import unittest
-from tiralabra_rsa.AvainGeneroija import AvainGeneroija
+from tiralabra_rsa.avain_generoija import AvainGeneroija
 
 class test_avain_generoija(unittest.TestCase):
     def setUp(self):

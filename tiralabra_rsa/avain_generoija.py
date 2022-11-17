@@ -1,27 +1,26 @@
 import random
 
-class AvainGeneroija(object):
+class AvainGeneroija():
 
     """
     Generoi RSA-algoritmin tarvitsemat avaimet
 
     Tämä luokka luo julkisen ja salaisen avaimen RSA-algoritimin käyttöön.
-    Sekä julkinen että salattu avain koostuu kahdesta osasta, alkulukujen tulosta ja eksponenttiosasta
+    Sekä julkinen että salattu avain koostuu kahdesta osasta,
+    alkulukujen tulosta ja eksponenttiosasta
     """
 
     def __init__(self):
 
-        #init-metodi on epäselvä ja keskeneräinen, selkeentyy kun integroidaan alkuluvut luovaan luokkaan ja RSA-luokkaan
-
         self.luo_avain()
-        self.julkinen_avain
-        self.salattu_avain
-        self.alkulukujen_tulo
-        self.euler
-        self.eka_alkuluku
-        self.toka_alkuluku
-        self.julkinen_eksponentti
-        self.salattu_eksponentti
+        self.julkinen_avain = 0
+        self.salattu_avain = 0
+        self.alkulukujen_tulo = 0
+        self.euler = 0
+        self.eka_alkuluku = 0
+        self.toka_alkuluku = 0
+        self.julkinen_eksponentti = 0
+        self.salattu_eksponentti = 0
 
     def luo_avain(self):
 
@@ -37,10 +36,11 @@ class AvainGeneroija(object):
 
         self.euler = self.eulerin_pii_funktio(self.eka_alkuluku, self.toka_alkuluku)
         self.julkinen_eksponentti = self.maarita_julkinen_eksponentti()
-        self.salattu_eksponentti = self.maarita_salattu_eksponentti(self.julkinen_eksponentti, self.euler)
+        self.salattu_eksponentti = self.maarita_salattu_eksponentti(self.julkinen_eksponentti,
+                                                                    self.euler)
         self.julkinen_avain = (self.julkinen_eksponentti, self.alkulukujen_tulo)
         self.salattu_avain = (self.salattu_eksponentti, self.alkulukujen_tulo)
-        
+
     def eulerin_pii_funktio(self, luku_a, luku_b):
         """
         Eulerin pii-funktio
@@ -54,7 +54,7 @@ class AvainGeneroija(object):
         Palauttaa:
             Kokonaisluvun (int), joka on Eulerin pii-funktion tulos
 
-        """ 
+        """
         return (luku_a - 1) * (luku_b - 1)
 
     def etsi_suurin_yhteinen_tekija(self, luku_a, luku_b):
@@ -69,9 +69,9 @@ class AvainGeneroija(object):
             Kokonaisluvun (int), joka on kahden argumenttina annetun luvun suurin yhteinen tekijä
         """
 
-        while(luku_b):
+        while luku_b:
             luku_a, luku_b = luku_b, luku_a % luku_b
-        
+
         return luku_a
 
     def maarita_julkinen_eksponentti(self):
@@ -87,7 +87,7 @@ class AvainGeneroija(object):
         suhteellinen_luku = self.euler
 
         julkinen_eksponentti = random.randint(2, suhteellinen_luku - 1)
-        
+
         while self.etsi_suurin_yhteinen_tekija(suhteellinen_luku, julkinen_eksponentti) != 1:
             julkinen_eksponentti = random.randint(2, julkinen_eksponentti - 1)
 
@@ -102,11 +102,11 @@ class AvainGeneroija(object):
         Argumentit:
             luku_a: kokonaisluku
             luku_b: kokonaisluku
-        
+
         Palauttaa:
             Kokonaisluvun (int), joka on salatun avaimen eksponenttiosa
         """
- 
+
         salattu_eksponentti = self.modul_kaanteisluku(luku_a, luku_b)
 
         return salattu_eksponentti
@@ -121,47 +121,49 @@ class AvainGeneroija(object):
         Argumentit:
             luku_a: kokonaisluku
             luku_b: kokonaisluku
-        
+
         Palauttaa:
             Kokonaisluvun (int), joka on salatun avaimen eksponenttiosa
         """
-        
-        a = luku_a
-        b = luku_b
 
-        old_s, s = 1, 0
-        old_t, t = 0, 1
-        
-        while b:
-            q = a // b
-            s, old_s = old_s - q * s, s
-            t, old_t = old_t - q * t, t
-            a, b = b, a % b
-        
-        return a, old_s, old_t
+        _a = luku_a
+        _b = luku_b
 
-    def modul_kaanteisluku(self, e, m):
+        old_s, _s = 1, 0
+        old_t, _t = 0, 1
+
+        while _b:
+            _q = _a // _b
+            _s, old_s = old_s - _q * _s, _s
+            _t, old_t = old_t - _q * _t, _t
+            _a, _b = _b, _a % _b
+
+        return _a, old_s, old_t
+
+    def modul_kaanteisluku(self, _e, _m):
         """
         Metodi tuottaa modulaariaritmetiikan käänteisluvun
 
         Argumentit:
             luku_a: kokonaisluku
             luku_b: kokonaisluku
-        
+
         Palauttaa:
             Kokonaisluvun (int), joka on modulaariartimetiikan käänteisluku
         """
-  
-        g, x, y = self.laajennettu_eukleideen_algoritmi(e, m)
-        assert g == 1
 
-        if x < 0:
-            x += m
-        
-        return x
+        _g, _x, _y = self.laajennettu_eukleideen_algoritmi(_e, _m)
+        assert _g == 1
+
+        if _x < 0:
+            _x += _m
+
+        return _x
 
     def hae_julkinen_avain(self):
+
         return self.julkinen_avain
-    
+
     def hae_salattu_avain(self):
+
         return self.salattu_avain

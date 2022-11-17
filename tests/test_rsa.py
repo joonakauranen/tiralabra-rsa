@@ -1,5 +1,5 @@
 import unittest
-from tiralabra_rsa.RSA import RSA
+from tiralabra_rsa.rsa import RSA
 
 class test_avain_generoija(unittest.TestCase):
     def setUp(self):

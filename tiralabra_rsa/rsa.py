@@ -1,4 +1,4 @@
-from tiralabra_rsa.AvainGeneroija import AvainGeneroija
+from tiralabra_rsa.avain_generoija import AvainGeneroija
 
 class RSA:
     def __init__(self):
@@ -13,14 +13,14 @@ class RSA:
 
         Argumentit:
             merkkijono: merkkijono, joka salataan (testivaiheessa kokonaisluku)
-        
+
         Palauttaa:
             Merkkijonon (str), joka on salattu käyttäen RSA-algortimia
         """
 
-        julkinen_eksponentti, n = self.julkinen_avain
+        julkinen_eksponentti, modulo = self.julkinen_avain
 
-        salattu_merkkijono = (merkkijono ** julkinen_eksponentti) % n
+        salattu_merkkijono = (merkkijono ** julkinen_eksponentti) % modulo
 
         return salattu_merkkijono
 
@@ -31,15 +31,13 @@ class RSA:
 
         Argumentit:
             merkkijono: merkkijono, joka puretaan (testivaiheessa kokonaisluku)
-        
+
         Palauttaa:
             Merkkijonon (str), joka on purettu käyttäen RSA-algortimia
         """
 
-        salattu_eksponentti, n = self.salattu_avain
+        salattu_eksponentti, modulo = self.salattu_avain
 
-        purettu_merkkijono = (merkkijono ** salattu_eksponentti) % n
+        purettu_merkkijono = (merkkijono ** salattu_eksponentti) % modulo
 
         return purettu_merkkijono
-
-
