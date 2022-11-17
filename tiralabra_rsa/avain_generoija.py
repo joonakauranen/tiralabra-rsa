@@ -86,10 +86,11 @@ class AvainGeneroija():
         """
         suhteellinen_luku = self.euler
 
-        julkinen_eksponentti = random.randint(2, suhteellinen_luku - 1)
+        ylaraja = suhteellinen_luku - 1
+        julkinen_eksponentti = random.randint(2, ylaraja)
 
         while self.etsi_suurin_yhteinen_tekija(suhteellinen_luku, julkinen_eksponentti) != 1:
-            julkinen_eksponentti = random.randint(2, julkinen_eksponentti - 1)
+            julkinen_eksponentti = random.randint(2, ylaraja)
 
         return julkinen_eksponentti
 
