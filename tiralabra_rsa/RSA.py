@@ -7,6 +7,17 @@ class RSA:
         self.salattu_avain = self.avain_generoija.hae_salattu_avain()
 
     def salaa_merkkijono(self, merkkijono):
+
+        """
+        Metodi salaa annetun merkkijonon käyttäen RSA-algoritmia
+
+        Argumentit:
+            merkkijono: merkkijono, joka salataan (testivaiheessa kokonaisluku)
+        
+        Palauttaa:
+            Merkkijonon (str), joka on salattu käyttäen RSA-algortimia
+        """
+
         julkinen_eksponentti, n = self.julkinen_avain
 
         salattu_merkkijono = (merkkijono ** julkinen_eksponentti) % n
@@ -14,6 +25,17 @@ class RSA:
         return salattu_merkkijono
 
     def pura_merkkijono(self, merkkijono):
+
+        """
+        Metodi purkaa aiemmin salatun merkkijonon käyttäen RSA-algoritmia
+
+        Argumentit:
+            merkkijono: merkkijono, joka puretaan (testivaiheessa kokonaisluku)
+        
+        Palauttaa:
+            Merkkijonon (str), joka on purettu käyttäen RSA-algortimia
+        """
+
         salattu_eksponentti, n = self.salattu_avain
 
         purettu_merkkijono = (merkkijono ** salattu_eksponentti) % n

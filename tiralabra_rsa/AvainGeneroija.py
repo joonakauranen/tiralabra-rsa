@@ -6,7 +6,7 @@ class AvainGeneroija(object):
     Generoi RSA-algoritmin tarvitsemat avaimet
 
     Tämä luokka luo julkisen ja salaisen avaimen RSA-algoritimin käyttöön.
-    Avainten generointi perustuu suuriin alkulukuihin liittyvään matematiikkaan.
+    Sekä julkinen että salattu avain koostuu kahdesta osasta, alkulukujen tulosta ja eksponenttiosasta
     """
 
     def __init__(self):
@@ -24,14 +24,11 @@ class AvainGeneroija(object):
         self.salattu_eksponentti
 
     def luo_avain(self):
-        #luo_avain-metodi on epäselvä ja keskeneräinen, selkeentyy kun integroidaan alkuluvut luovaan luokkaan ja RSA-luokkaan
-
 
         """
         Tätä metodia kutsumalla luodaan avaimet.
 
-        Metodi kutsuu muita tarvittavia metodeita ja palauttaa avaimet.
-        Tässä vaiheessa luokan metodit ovat erillisiä ja tässä asetataan ennalta määrätyt alkuluvut
+        Metodi kutsuu muita tarvittavia metodeita ja määrittää avaimia kuvaavat luokkamuuttujat
         """
 
         self.eka_alkuluku = 7
@@ -49,12 +46,27 @@ class AvainGeneroija(object):
         Eulerin pii-funktio
 
         Laskee ja palauttaa Eulerin pii-funktion tuloksen
+
+        Argumentit:
+            luku_a: ensimmäinen alkuluku
+            luku_b: toinen alkuluku
+
+        Palauttaa:
+            Kokonaisluvun (int), joka on Eulerin pii-funktion tulos
+
         """ 
         return (luku_a - 1) * (luku_b - 1)
 
     def etsi_suurin_yhteinen_tekija(self, luku_a, luku_b):
         """
         Metodi etsii suurimman yhteisen tekijän annetuille luvuille
+
+        Argumentit:
+            luku_a: mikä tahansa kokonaisluku
+            luku_b: mikä tahansa kokonaisluku
+
+        Palauttaa:
+            Kokonaisluvun (int), joka on kahden argumenttina annetun luvun suurin yhteinen tekijä
         """
 
         while(luku_b):
@@ -68,6 +80,9 @@ class AvainGeneroija(object):
 
         Metodi tuottaa julkisen eksponentin, joka on kokonaisluku e,
         kun 1 < e < N jolle Eulerin luku on suhteellinen alkuluku.
+
+        Palauttaa:
+            Kokonaisluvun (int), joka on julkisen avaimen eksponenttiosa
         """
         suhteellinen_luku = self.euler
 
@@ -82,7 +97,14 @@ class AvainGeneroija(object):
         """
         Metodi luo salatun eksponentin RSA-algoritmin käyttöön
 
-        Metodi valitsee salatan eksponentin d, siten, että d e ≡ 1 (mod Eulerin luku)
+        Metodi valitsee salatun eksponentin d, siten, että d e ≡ 1 (mod Eulerin luku)
+
+        Argumentit:
+            luku_a: kokonaisluku
+            luku_b: kokonaisluku
+        
+        Palauttaa:
+            Kokonaisluvun (int), joka on salatun avaimen eksponenttiosa
         """
  
         salattu_eksponentti = self.modul_kaanteisluku(luku_a, luku_b)
@@ -95,6 +117,13 @@ class AvainGeneroija(object):
 
         Algoritmi laskee ja palauttaa suurimman yhteisen tekijän ja luvut, jotka yhdessä
         muuttujien luku_a ja luku_b kanssa toteuttavat Bezout'n yhtälön
+
+        Argumentit:
+            luku_a: kokonaisluku
+            luku_b: kokonaisluku
+        
+        Palauttaa:
+            Kokonaisluvun (int), joka on salatun avaimen eksponenttiosa
         """
         
         a = luku_a
@@ -114,6 +143,13 @@ class AvainGeneroija(object):
     def modul_kaanteisluku(self, e, m):
         """
         Metodi tuottaa modulaariaritmetiikan käänteisluvun
+
+        Argumentit:
+            luku_a: kokonaisluku
+            luku_b: kokonaisluku
+        
+        Palauttaa:
+            Kokonaisluvun (int), joka on modulaariartimetiikan käänteisluku
         """
   
         g, x, y = self.laajennettu_eukleideen_algoritmi(e, m)
