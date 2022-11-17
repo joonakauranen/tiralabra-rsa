@@ -13,8 +13,8 @@ class AvainGeneroija():
     def __init__(self):
 
         self.luo_avain()
-        self.julkinen_avain = 0
-        self.salattu_avain = 0
+        self.julkinen_avain
+        self.salattu_avain
         self.alkulukujen_tulo = 0
         self.euler = 0
         self.eka_alkuluku = 0
@@ -30,16 +30,16 @@ class AvainGeneroija():
         Metodi kutsuu muita tarvittavia metodeita ja määrittää avaimia kuvaavat luokkamuuttujat
         """
 
-        self.eka_alkuluku = 7
-        self.toka_alkuluku = 11
+        self.eka_alkuluku = 191
+        self.toka_alkuluku = 251
         self.alkulukujen_tulo = self.eka_alkuluku * self.toka_alkuluku
 
         self.euler = self.eulerin_pii_funktio(self.eka_alkuluku, self.toka_alkuluku)
         self.julkinen_eksponentti = self.maarita_julkinen_eksponentti()
         self.salattu_eksponentti = self.maarita_salattu_eksponentti(self.julkinen_eksponentti,
                                                                     self.euler)
-        self.julkinen_avain = (self.julkinen_eksponentti, self.alkulukujen_tulo)
-        self.salattu_avain = (self.salattu_eksponentti, self.alkulukujen_tulo)
+        self.julkinen_avain = self.julkinen_eksponentti, self.alkulukujen_tulo
+        self.salattu_avain = self.salattu_eksponentti, self.alkulukujen_tulo
 
     def eulerin_pii_funktio(self, luku_a, luku_b):
         """
