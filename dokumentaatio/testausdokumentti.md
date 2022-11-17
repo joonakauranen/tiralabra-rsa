@@ -2,7 +2,7 @@
 
 ### Yleistä
 
-Tässä vaiheessa testaus koostuu yksikkötesteistä. Pohdin suorituskykytestien mielekkyyttä RSA-algoritmin tapauksessa. Algoritmin vaativin osa on modulaarinen eksponentio, jonka vaativuus on suhteellinen alkulukujen tuloon nähden. Tarkemmin ottaen alkulukujen ja niiden tulon kokoon biteissä. Alkulukujen koko taas on ennalta määrätty luku.
+Tässä vaiheessa testaus koostuu yksikkötesteistä.
 
 ### Yksikkotestaus
 
