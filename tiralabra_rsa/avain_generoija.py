@@ -12,15 +12,15 @@ class AvainGeneroija():
 
     def __init__(self):
 
-        self.luo_avain()
-        self.julkinen_avain
-        self.salattu_avain
+        self.julkinen_avain = 0, 0
+        self.salattu_avain = 0, 0
         self.alkulukujen_tulo = 0
         self.euler = 0
         self.eka_alkuluku = 0
         self.toka_alkuluku = 0
         self.julkinen_eksponentti = 0
         self.salattu_eksponentti = 0
+        self.luo_avain()
 
     def luo_avain(self):
 
