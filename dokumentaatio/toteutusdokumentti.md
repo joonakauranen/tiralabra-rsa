@@ -1,6 +1,6 @@
 # Toteutusdokumentti
 
-RSA-algoritmi perustuu suuriin alkulukuihin ja niiden ominaisuuksiin. Tätä myötä tämän projektin yleisrakennetta on mielekästä hahmotella toteutettujen matemaattisten algoritmien ja niiden Python-kielisten implementaatioiden näkökulmasta.
+RSA-algoritmi perustuu suuriin alkulukuihin ja niiden matemaattisiin ominaisuuksiin. Tätä myötä tämän projektin yleisrakennetta on mielekästä hahmotella toteutettujen matemaattisten algoritmien ja niiden Python-kielisten implementaatioiden näkökulmasta.
 
 ### Avainten luominen
 
