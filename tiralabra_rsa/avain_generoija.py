@@ -1,4 +1,5 @@
 import random
+from tiralabra_rsa.alkuluku_generoija import AlkulukuGeneroija
 
 class AvainGeneroija():
 
@@ -20,6 +21,7 @@ class AvainGeneroija():
         self.toka_alkuluku = 0
         self.julkinen_eksponentti = 0
         self.salattu_eksponentti = 0
+        self.alkuluku_generoija = AlkulukuGeneroija()
         self.luo_avain()
 
     def luo_avain(self):
@@ -30,8 +32,8 @@ class AvainGeneroija():
         Metodi kutsuu muita tarvittavia metodeita ja määrittää avaimia kuvaavat luokkamuuttujat
         """
 
-        self.eka_alkuluku = 191
-        self.toka_alkuluku = 251
+        self.eka_alkuluku = self.alkuluku_generoija.hae_alkuluku1()
+        self.toka_alkuluku = self.alkuluku_generoija.hae_alkuluku2()
         self.alkulukujen_tulo = self.eka_alkuluku * self.toka_alkuluku
 
         self.euler = self.eulerin_pii_funktio(self.eka_alkuluku, self.toka_alkuluku)
@@ -130,16 +132,16 @@ class AvainGeneroija():
         _a = luku_a
         _b = luku_b
 
-        old_s, _s = 1, 0
-        old_t, _t = 0, 1
+        vanha_s, _s = 1, 0
+        vanha_t, _t = 0, 1
 
         while _b:
             _q = _a // _b
-            _s, old_s = old_s - _q * _s, _s
-            _t, old_t = old_t - _q * _t, _t
+            _s, vanha_s = vanha_s - _q * _s, _s
+            _t, vanha_t = vanha_t - _q * _t, _t
             _a, _b = _b, _a % _b
 
-        return _a, old_s, old_t
+        return _a, vanha_s, vanha_t
 
     def modul_kaanteisluku(self, _e, _m):
         """
