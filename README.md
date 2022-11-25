@@ -4,6 +4,8 @@
 
 [Testausdokumentti](https://github.com/joonakauranen/tiralabra-rsa/blob/main/dokumentaatio/testausdokumentti.md)
 
+[Toteutusdokumentti](https://github.com/joonakauranen/tiralabra-rsa/blob/main/dokumentaatio/toteutusdokumentti.md)
+
 ## Viikkoraportit
 
 [Viikko1](https://github.com/joonakauranen/tiralabra-rsa/blob/main/dokumentaatio/viikkoraportit/Viikkoraportti1.md)
