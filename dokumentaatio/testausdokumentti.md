@@ -26,4 +26,4 @@ Kehitysympäristössä yksikkötestit suoritetaan GitHub Actionsin avulla. Muuto
 
 ### Integraatiotestaus
 
-Integraatiotestausta on tehty vähäisissä määrin tekstikäyttöliittymän avulla. Salaus ja purku toimivat hyvin. On kuitenkin syytä huomioida, että syötteen tulee olla pienempi kuin alkulukujen tulon.
+Integraatiotestausta on tehty tekstikäyttöliittymän avulla. Salaus, purku sekä avainten että alkulukujen luominen toimivat hyvin. 
