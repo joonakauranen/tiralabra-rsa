@@ -1,4 +1,4 @@
-# Viikko3
+# Viikko4
 
 Neljännellä viikolla RSA-algoritmin toiminta on saatu valmiiksi. Ohjelma luo suuret alkuluvut, niistä edelleen avaimet ja avaimien avulla voi salata syötteen. 
 
