@@ -14,6 +14,8 @@
 
 [Viikko3](https://github.com/joonakauranen/tiralabra-rsa/blob/main/dokumentaatio/viikkoraportit/Viikkoraportti3.md)
 
+[Viikko4](https://github.com/joonakauranen/tiralabra-rsa/blob/main/dokumentaatio/viikkoraportit/Viikkoraportti4.md)
+
 ## codecov
 
 Alla olevaa codecov-merkkiä klikkaamalla testikattavuusraporttiin
