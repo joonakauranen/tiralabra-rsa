@@ -5,6 +5,10 @@ class test_avain_generoija(unittest.TestCase):
     def setUp(self):
         self.alkulukugeneroija = AlkulukuGeneroija()
 
-    def tunnistaa_yhdistetyn_luvun(self):
-        hyvaksyttiinko = self.alkulukugeneroija.apufunktio(2)
-        self.assertEquals(hyvaksyttiinko, 0)
+    def test_ei_hyvaksy_pienta_yhdistettya_lukua(self):
+        hyvaksyttiinko = self.alkulukugeneroija.apufunktio(12)
+        self.assertEqual(hyvaksyttiinko, 0)
+
+    def test_ei_hyvaksy_suurta_yhdistettya_lukua(self):
+        hyvaksyttiinko = self.alkulukugeneroija.apufunktio(1200000000000000000000000000000)
+        self.assertEqual(hyvaksyttiinko, 0)

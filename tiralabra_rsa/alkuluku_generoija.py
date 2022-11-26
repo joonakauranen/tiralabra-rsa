@@ -78,7 +78,8 @@ class AlkulukuGeneroija():
 
     def onko_yhdistetty_luku(self, testattava_luku, _d, _s):
         for _ in range(10):
-            _a = random.randrange(2, testattava_luku - 1)
+            ylaraja = testattava_luku - 1
+            _a = random.randrange(2, ylaraja)
             _x = pow(_a, _d, testattava_luku)
 
             if _x == 1 or _x == testattava_luku - 1:
