@@ -8,6 +8,8 @@ Tässä vaiheessa testaus koostuu yksikkötesteistä.
 
 Yksikkötestit suoritetaan osittain ennaltamäärättyjen lukujen perusteella. Testit on toteutettu osittain valmiita lukuja käyttäen, koska todelliseen toteutukseen liittyy sattumanvaraisuutta.
 
+Alkuluvut vahvistava testaus perustuu siihen, että käytettävät algoritmit pyrkivät tunnistamaan yhdistetyt luvut. Testatessa siis annetaan algoritmille yhdistettyjä lukuja ja oletetaan, että algoritmi ei niitä hyväksy. Näin myös tapahtuu luotujen testien tapauksessa.
+
 Yksikkötestit suoritetaan ohjelmallisesti käyttäen Pytest-testauskehystä, ja niiden kattavuus raportoidaan automaattisesti Codecov analyysityökalun avulla.
 
 
