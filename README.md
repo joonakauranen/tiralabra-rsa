@@ -16,6 +16,20 @@
 
 [Viikko4](https://github.com/joonakauranen/tiralabra-rsa/blob/main/dokumentaatio/viikkoraportit/Viikkoraportti4.md)
 
+## Käyttöohje
+
+1. Kloona projekti
+2. Asenna Poetry paikallisesti: ```pip install poetry```
+3. Asenna riippuvuudet: ```poetry install```
+4. Aja ohjelma: ```poetry run python3 tiralabra_rsa/```
+  - tässä vaiheessa ohjelma osaa salata vain kokonaisluvun
+  - lisäksi testimielessä luotavat avaimet ovat pieniä, joten syötteen tulee pieni (pienempi kuin moduluksen)
+  - jos haluaa testata suuremmilla luvuilla niin koodia voi muuttaa luomaan suurempia lukuja
+    - muuta ```alkuluku_generoija.eratostheneen_seula```-metodin kohta ```testattava_luku = random.getrandbits(10)``` 10 -> esim 512
+5. Aja testit: ```poetry run pytest```
+
+Testikattavuusraportti myös alla.
+
 ## codecov
 
 Alla olevaa codecov-merkkiä klikkaamalla testikattavuusraporttiin
