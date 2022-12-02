@@ -19,5 +19,15 @@ Jos sattumanvarainen luku läpäisee seulan on se potentiaalisesti tarvittava su
 
 ### Salaus ja purku
 
+RSA-algoritmi salaa syötteen seuraavalla tavalla:
+
+1. Lasketaan syöte potenssiin julkinen eksponentti
+2. Otetaan jakojäännös kohdan 1 luku mod N, jossa N on aiemmin laskettu vakio ts modulus. Tämä luku on salattu viesti.
+
+Salattu viesti voidaan purkaa alkuperäiseksi seuraavalla tavalla:
+
+1. Lasketaan salattu viesti potenssiin salainen eksponentti
+2. Otetaan jakojäännös kohdan 1 luku mod N, jossa N on aiemmin laskettu vakio ts modulus. Saatu luku on alkuperäinen viesti.
+
 ### Aikavaativuus
 
