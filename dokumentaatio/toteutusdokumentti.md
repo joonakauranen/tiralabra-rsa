@@ -31,3 +31,6 @@ Salattu viesti voidaan purkaa alkuperäiseksi seuraavalla tavalla:
 
 ### Aikavaativuus
 
+Kun k on moduluksen bittien määrä on RSA-algoritmin julkisen avaimen operaatioiden aikavaativuus O(k2), salaisen avaimen operaatioiden aikavaativuus O(k3) ja avainten luomisen aikavaativuus O(k4).
+
+Lähde: [RSA labs](https://web.archive.org/web/20071112103441/http://www.rsa.com/rsalabs/node.asp?id=2215)
