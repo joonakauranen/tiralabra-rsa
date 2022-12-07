@@ -21,6 +21,17 @@ class AlkulukuGeneroija():
         self.luo_alkuluvut()
 
     def luo_alkuluvut(self):
+
+        """
+        Alkulukujen luominen
+
+        Metodia kutsutaan kun luodaan alkuluvut. Metodi luo alkuluvut ja varmistaa, että ne eivät ole samat.
+
+        Palauttaa:
+            Kokonaisluvun (int), jotka ovat suuria alkulukuja
+
+        """
+
         alkuluku1 = self.luo_alkuluku()
         alkuluku2 = self.luo_alkuluku()
 
@@ -32,6 +43,17 @@ class AlkulukuGeneroija():
 
     def luo_alkuluku(self):
 
+        """
+        Yksittäisen alkuluvun luominen
+
+        Metodi käyttää alkuluvun luomiseen Eratostheneen seulaa, jolla seulotaan pienehköt yhdistetyt luvut.
+        Tämän jälkeen testataan lukua Miller-Rabinin -algoritmilla.
+
+        Palauttaa:
+            Kokonaisluvun (int), joka on suurella todennäköisyydellä alkuluku
+
+        """
+
         while True:
             testattava_luku = self.eratostheneen_seula()
             testattava_luku = self.miller_rabin_algoritmi(testattava_luku)
@@ -39,6 +61,17 @@ class AlkulukuGeneroija():
                 return testattava_luku
 
     def eratostheneen_seula(self):
+
+        """
+        Metodi toteuttaa Eratostheneen seulan.
+
+        Metodi testaa onko testattava luku jaollinen sadalla ensimmäisellä alkuluvulla
+        ja hylkää luvun jos on.
+
+        Palauttaa:
+            Kokonaisluvun (int), joka on läpäisee seulan, eli on mahdollinen suuri alkuluku
+
+        """
 
         while True:
 
@@ -54,6 +87,16 @@ class AlkulukuGeneroija():
             return testattava_luku
 
     def miller_rabin_algoritmi(self, suuri_alkuluku):
+
+        """
+        Metodi toteuttaa Miller-Rabinin algoritmin
+
+        Testaa onko testattavalla luvulla alkuluvun ominaisuuksia
+
+        Palauttaa:
+            Kokonaisluvun (int), joka on suurella todennköisyydellä alkuluku
+
+        """
 
         if suuri_alkuluku < 3 or suuri_alkuluku % 2 == 0:
             return 0
