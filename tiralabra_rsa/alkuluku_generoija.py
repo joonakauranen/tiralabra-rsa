@@ -42,7 +42,7 @@ class AlkulukuGeneroija():
 
         while True:
 
-            testattava_luku = random.getrandbits(10)
+            testattava_luku = random.getrandbits(1000)
 
             if testattava_luku < 3 or testattava_luku % 2 == 0:
                 continue

@@ -20,7 +20,9 @@ class RSA:
 
         julkinen_eksponentti, modulo = self.julkinen_avain
 
-        salattu_merkkijono = (merkkijono ** julkinen_eksponentti) % modulo
+        #salattu_merkkijono = (merkkijono ** julkinen_eksponentti) % modulo
+
+        salattu_merkkijono = pow(merkkijono, julkinen_eksponentti, modulo)
 
         return salattu_merkkijono
 
@@ -38,6 +40,8 @@ class RSA:
 
         salattu_eksponentti, modulo = self.salattu_avain
 
-        purettu_merkkijono = (merkkijono ** salattu_eksponentti) % modulo
+        #purettu_merkkijono = (merkkijono ** salattu_eksponentti) % modulo
+
+        purettu_merkkijono = pow(merkkijono, salattu_eksponentti, modulo)
 
         return purettu_merkkijono
