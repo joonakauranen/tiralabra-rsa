@@ -25,7 +25,8 @@ class AlkulukuGeneroija():
         """
         Alkulukujen luominen
 
-        Metodia kutsutaan kun luodaan alkuluvut. Metodi luo alkuluvut ja varmistaa, että ne eivät ole samat.
+        Metodia kutsutaan kun luodaan alkuluvut. Metodi luo alkuluvut ja varmistaa,
+        että ne eivät ole samat.
 
         Palauttaa:
             Kokonaisluvun (int), jotka ovat suuria alkulukuja
@@ -46,7 +47,8 @@ class AlkulukuGeneroija():
         """
         Yksittäisen alkuluvun luominen
 
-        Metodi käyttää alkuluvun luomiseen Eratostheneen seulaa, jolla seulotaan pienehköt yhdistetyt luvut.
+        Metodi käyttää alkuluvun luomiseen Eratostheneen seulaa,
+        jolla seulotaan pienehköt yhdistetyt luvut.
         Tämän jälkeen testataan lukua Miller-Rabinin -algoritmilla.
 
         Palauttaa:
