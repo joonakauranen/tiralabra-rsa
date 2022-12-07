@@ -16,6 +16,7 @@ class Kayttoliittyma:
         print("***RSA-salaus***")
         salattava_merkkijono = int(input("Syötä salattava merkkijono:"))
         salattu_merkkijono = self.rsa.salaa_merkkijono(salattava_merkkijono)
+        print("____________________")
         print(salattu_merkkijono)
         print("____________________")
         purettu_merkkijono = self.rsa.pura_merkkijono(salattu_merkkijono)

@@ -75,7 +75,7 @@ class AlkulukuGeneroija():
 
         while True:
 
-            testattava_luku = random.getrandbits(1000)
+            testattava_luku = random.getrandbits(10)
 
             if testattava_luku < 3 or testattava_luku % 2 == 0:
                 continue
@@ -120,7 +120,7 @@ class AlkulukuGeneroija():
         return self.onko_yhdistetty_luku(mahdollinen_alkuluku, _d, _s)
 
     def onko_yhdistetty_luku(self, testattava_luku, _d, _s):
-        for _ in range(10):
+        for _ in range(40):
             ylaraja = testattava_luku - 1
             _a = random.randrange(2, ylaraja)
             _x = pow(_a, _d, testattava_luku)
