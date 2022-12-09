@@ -26,4 +26,12 @@ Kehitysympäristössä yksikkötestit suoritetaan GitHub Actionsin avulla. Muuto
 
 ### Integraatiotestaus
 
-Integraatiotestausta on tehty tekstikäyttöliittymän avulla. Salaus, purku sekä avainten että alkulukujen luominen toimivat hyvin. 
+Integraatiotestausta on tehty tekstikäyttöliittymän avulla. Salaus, purku sekä avainten että alkulukujen luominen toimivat hyvin.
+
+### Miller-Rabinin testauksesta
+
+Miller-Rabinin-algoritmia on testattu tuomalla testien käyttöön toinen [implementaatio](https://pypi.org/project/miller-rabin/). Testissä luodaan kymmenen satunnaista lukua ja tarkistetaan, että tämän projektin implementaation tulokset ovat yhteneväiset kirjaston algoritmin kanssa.
+
+Tämän lisäksi testataan, että algoritmi hylkää suurten alkulukujen neliöt. Tähän on käytetty suuria [Mersennen lukuja](https://www.mersenne.org/primes/).
+
+Yksinkertaisempia yksikkötestejä käytetään muun alkulukujen luomiseen liittyvän toiminnallisuuden testaamiseen.
