@@ -6,6 +6,7 @@ authors = ["Joona <joona.kauranen@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
+miller-rabin = "^1.0.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"

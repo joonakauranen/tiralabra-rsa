@@ -97,6 +97,19 @@ optional = false
 python-versions = ">=3.6"
 
 [[package]]
+name = "miller-rabin"
+version = "1.0.1"
+description = "Fast, deterministic* Miller-Rabin primality test."
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.extras]
+bench = ["gmpy2", "py-cpuinfo"]
+dev = ["pytest", "gmpy2", "py-cpuinfo"]
+tests = ["pytest"]
+
+[[package]]
 name = "more-itertools"
 version = "9.0.0"
 description = "More routines for operating on iterables, beyond itertools"
@@ -245,7 +258,7 @@ python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,>=2.7"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "ae4e4d81a7e565b9339aa2fdf5f6e120c2690bb20ae1e35f97c4436a90d1551c"
+content-hash = "aa7aa8f8dc10b0eed48d59e75c41b013f8e2c546a9562a74a65747ed59c333e9"
 
 [metadata.files]
 astroid = []
@@ -260,6 +273,7 @@ isort = [
 ]
 lazy-object-proxy = []
 mccabe = []
+miller-rabin = []
 more-itertools = []
 packaging = []
 platformdirs = []
