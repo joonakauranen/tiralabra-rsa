@@ -4,6 +4,8 @@ Tällä viikolla loin testejä Miller-Rabinin-algoritmia varten. Tässä projekt
 
 Opittuja asioita: Vertaisarvioidessa tuli kerrattua leveyshaun toimintaa. Mersennen luvut olivat uusi asia. Erilaisia mahdollisuuksia testaamiseen. Yleiskuvaa tietokoneiden käyttämien merkistöjen toiminnasta.
 
+Epäselvyyttää aiheuttaa se ,että joillain syötteillä on ongelmia UTF-8 -muunnoksen kanssa. Pitää koittaa selvittää tätä. Virheviesti kertoo, että syötteessä on muu kuin UTF-8-muotoinen tavu. Ongelma ei kuitenkaan säännöllisesti esiinny minkään tietyn merkin tapauksessa vaan esimerkiksi pitkän merkkijonon tapauksessa, jossa on peräkkäin samaa merkkiä. Kuitenkaan samaa merkkiä sisältävät lyhyemmät merkkijonot eivät aiheuta ongelmaa.
+
 Projekti on edennyt alkuperäisen suunnitelman mukaan. Suunnitelmasta kohdat 1,3, 4 ja 5 on toteutettu. Kohta 2 on osoittautunut tarpeettomaksi.
 
 1. Luodaan tekstikäyttöliittymä, joka ottaa syötteenä merkkijonon                 (alustava versio tehty)
@@ -13,6 +15,6 @@ Projekti on edennyt alkuperäisen suunnitelman mukaan. Suunnitelmasta kohdat 1,3
 5. Alkulukujen generointi, vahvistus ja niiden perusteella avaimien luominen      (alustava versio tehty)
 6. SHA256-funktion toteutus ja sen soveltaminen syötteenä olevaan merkkijonoon    (tehdään jos jää aikaa)
 
-Ohjelma on pitälti valmis. Toki parannettavaa ja siistittävää varmasti löytyy. Joillain syötteillä on ongelmia UTF-8 -muunnoksen kanssa. Pitää koittaa selvittää tätä. Yksikkötestejä voisi myös laajentaa. Aikavaativuuden arviointia voisi suoraan lähteen siteeraamisen sijaan pohtia tarkemmin itse.
+Ohjelma on pitälti valmis. Toki parannettavaa ja siistittävää varmasti löytyy. Yksikkötestejä voisi myös laajentaa. Aikavaativuuden arviointia voisi suoraan lähteen siteeraamisen sijaan pohtia tarkemmin itse.
 
 Käytetty aika: 8h
