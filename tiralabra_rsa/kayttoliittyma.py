@@ -16,12 +16,14 @@ class Kayttoliittyma:
 
     def kaynnista(self):
         print("***RSA-salaus***")
-        salattava_merkkijono = input("Syötä salattava merkkijono:")
+        salattava_merkkijono = input("Syötä salattava merkkijono: ")
         merkkijono_kokonaislukuna = self.muuntaja.merkkijono_kokonaisluvuksi(salattava_merkkijono)
         salattu_merkkijono = self.rsa.salaa_merkkijono(merkkijono_kokonaislukuna)
-        print("____________________")
+        print("")
+        print("Syöte salattuna:")
         print(salattu_merkkijono)
-        print("____________________")
+        print("")
+        print("Syöte purettuna:")
         purettu_merkkijono = self.rsa.pura_merkkijono(salattu_merkkijono)
         purettu_merkkijono = self.muuntaja.kokonaisluku_merkkijonoksi(purettu_merkkijono)
         print(purettu_merkkijono)
