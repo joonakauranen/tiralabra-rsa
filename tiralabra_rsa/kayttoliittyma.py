@@ -1,4 +1,5 @@
 from tiralabra_rsa import rsa
+from tiralabra_rsa import str_int_str_muuntaja
 
 class Kayttoliittyma:
 
@@ -11,13 +12,16 @@ class Kayttoliittyma:
 
     def __init__(self):
         self.rsa = rsa.RSA()
+        self.muuntaja = str_int_str_muuntaja.Str_int_str_muuntaja()
 
     def kaynnista(self):
         print("***RSA-salaus***")
-        salattava_merkkijono = int(input("Syötä salattava merkkijono:"))
-        salattu_merkkijono = self.rsa.salaa_merkkijono(salattava_merkkijono)
+        salattava_merkkijono = input("Syötä salattava merkkijono:")
+        merkkijono_kokonaislukuna = self.muuntaja.merkkijono_kokonaisluvuksi(salattava_merkkijono)
+        salattu_merkkijono = self.rsa.salaa_merkkijono(merkkijono_kokonaislukuna)
         print("____________________")
         print(salattu_merkkijono)
         print("____________________")
         purettu_merkkijono = self.rsa.pura_merkkijono(salattu_merkkijono)
+        purettu_merkkijono = self.muuntaja.kokonaisluku_merkkijonoksi(purettu_merkkijono)
         print(purettu_merkkijono)
