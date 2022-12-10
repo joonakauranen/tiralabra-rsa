@@ -18,6 +18,8 @@
 
 [Viikko5](https://github.com/joonakauranen/tiralabra-rsa/blob/main/dokumentaatio/viikkoraportit/Viikkoraportti5.md)
 
+[Viikko6](https://github.com/joonakauranen/tiralabra-rsa/blob/main/dokumentaatio/viikkoraportit/Viikkoraportti6.md)
+
 ## Käyttöohje
 
 1. Kloona projekti
