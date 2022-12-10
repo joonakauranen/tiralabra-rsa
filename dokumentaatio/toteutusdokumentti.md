@@ -29,6 +29,10 @@ Salattu viesti voidaan purkaa alkuperäiseksi seuraavalla tavalla:
 1. Lasketaan salattu viesti potenssiin salainen eksponentti
 2. Otetaan jakojäännös kohdan 1 luku mod N, jossa N on aiemmin laskettu vakio ts modulus. Saatu luku on alkuperäinen viesti.
 
+### Merkkijonosta kokonaisluvuksi ja kokonaisluvusta merkkijonoksi
+
+Kuten edellisessä kohdassa on näytetty RSA:n toiminta perustuu modulaariseen potenssikorotukseen. Tätä operaatiota ei luonnollisestikaan voi suoraan käyttää merkkijonoihin. Ohjelma muuttaa merkkijonomuotoisen syötteen ensin UTF-8 esitysmuotoon ja lopulta kokonaisluvuksi. Sama muutos tehdään toisinpäin kun salaus on purettu.
+
 ### Aikavaativuus
 
 Kun k on moduluksen bittien määrä on RSA-algoritmin julkisen avaimen operaatioiden aikavaativuus O(k2), salaisen avaimen operaatioiden aikavaativuus O(k3) ja avainten luomisen aikavaativuus O(k4).
