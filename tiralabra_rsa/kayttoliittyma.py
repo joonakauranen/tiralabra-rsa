@@ -12,7 +12,7 @@ class Kayttoliittyma:
 
     def __init__(self):
         self.rsa = rsa.RSA()
-        self.muuntaja = str_int_str_muuntaja.Str_int_str_muuntaja()
+        self.muuntaja = str_int_str_muuntaja.StrIntStrMuuntaja()
 
     def kaynnista(self):
         print("***RSA-salaus***")

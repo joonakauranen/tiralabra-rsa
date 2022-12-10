@@ -1,6 +1,6 @@
 import binascii
 
-class Str_int_str_muuntaja():
+class StrIntStrMuuntaja():
 
     """
     Luokka toteuttaa metodit joilla voi muuttaa str -> int -> str
