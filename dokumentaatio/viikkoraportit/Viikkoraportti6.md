@@ -1,6 +1,6 @@
 # Viikko6
 
-Tällä viikolla loin testejä Miller-Rabinin-algoritmia varten. Tässä projektissa toteutetun algoritmin tuloksia verrataan Python-kirjaston tuloksiin ja lisäksi tarkistetaan, että algoritmi hylkää suurien Mersennen lukujen neliön. Lisäksi toteutettiin toiminnallisuus, jonka avulla voi salata kokonaislukujen lisäksi merkkijonoja ja testit tällä muunnokselle. Tein myös vertaisarvion leveyshakua käyttävästä labyrintti-ohjelmasta.
+Tällä viikolla loin testejä Miller-Rabinin-algoritmia varten. Tässä projektissa toteutetun algoritmin tuloksia verrataan Python-kirjaston tuloksiin ja lisäksi tarkistetaan, että algoritmi hylkää suurien Mersennen lukujen neliön. Lisäksi toteutettiin toiminnallisuus, jonka avulla voi salata kokonaislukujen lisäksi merkkijonoja ja testit sekä Pydoc tällä muunnokselle. Tein myös vertaisarvion leveyshakua käyttävästä labyrintti-ohjelmasta.
 
 Opittuja asioita: Vertaisarvioidessa tuli kerrattua leveyshaun toimintaa. Mersennen luvut olivat uusi asia. Erilaisia mahdollisuuksia testaamiseen. Yleiskuvaa tietokoneiden käyttämien merkistöjen toiminnasta.
 
