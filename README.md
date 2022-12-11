@@ -26,16 +26,17 @@
 2. Asenna Poetry paikallisesti: ```pip install poetry```
 3. Asenna riippuvuudet: ```poetry install```
 4. Aja ohjelma: ```poetry run python3 tiralabra_rsa/```
-  - tässä vaiheessa ohjelma osaa salata vain kokonaisluvun
-  - lisäksi testimielessä luotavat avaimet ovat pieniä, joten syötteen tulee pieni (pienempi kuin moduluksen)
-  - jos haluaa testata suuremmilla luvuilla niin koodia voi muuttaa luomaan suurempia lukuja
+  - syötteenä voi käyttää mitä tahansa merkkijonoja (tai numeroita, mutta ne käsitellään merkkijonoina)
+  - syötteen kokoa rajoittaa luotavien avaimine ja moduluksen koko (syötteen tulee olla pienempi kuin modulus)
+  - jos halutaan käsitellä suurempia syötteitä voidaan luoda suurempia avaimia
     - muuta ```alkuluku_generoija.eratostheneen_seula```-metodin kohta ```testattava_luku = random.getrandbits(10)``` 10 -> esim 512
 5. Aja testit: ```poetry run pytest```
+6. Aja Pylint ```poetry run pylint tiralabra_rsa```
 
 Testikattavuusraportti myös alla.
 
 ## codecov
 
-Alla olevaa codecov-merkkiä klikkaamalla testikattavuusraporttiin
+Alla olevaa codecov-merkkiä klikkaamalla uusimpaan testikattavuusraporttiin:
 
 [![codecov](https://codecov.io/gh/joonakauranen/tiralabra-rsa/branch/main/graph/badge.svg?token=0Z1448E5ED)](https://codecov.io/gh/joonakauranen/tiralabra-rsa)
