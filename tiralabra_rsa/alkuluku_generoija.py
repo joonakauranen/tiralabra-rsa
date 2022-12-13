@@ -91,17 +91,19 @@ class AlkulukuGeneroija():
     def miller_rabin_algoritmi(self, suuri_alkuluku):
 
         """
-        Metodi toteuttaa Miller-Rabinin algoritmin
+        Metodi toteuttaa osan Miller-Rabinin algoritmista
 
-        Testaa onko testattavalla luvulla alkuluvun ominaisuuksia
+        Metodi hylkää yksinkertaiset tapaukset, joissa tarkasteltava luku ei ole suuri alkuluku.
+        Jos lukua ei hylätä jatketaan Miller-Rabinin testin suorittamista.
 
         Palauttaa:
-            Kokonaisluvun (int), joka on suurella todennköisyydellä alkuluku
+            Kokonaisluvun (int), joka on potentiaalinen suuri alkuluku
 
         """
 
         if suuri_alkuluku < 3 or suuri_alkuluku % 2 == 0:
             return 0
+
         suuri_alkuluku = self.apufunktio(suuri_alkuluku)
 
         if suuri_alkuluku == 0:
@@ -110,6 +112,17 @@ class AlkulukuGeneroija():
         return suuri_alkuluku
 
     def apufunktio(self, mahdollinen_alkuluku):
+
+        """
+        Metodi toteuttaa osan Miller-Rabinin algoritmista
+
+        Testaa onko testattavalla luvulla alkuluvun ominaisuuksia
+
+        Palauttaa:
+            Kokonaisluvun (int), joka on potentiaalinen alkuluku
+
+        """
+
         _s = 0
         _d = mahdollinen_alkuluku-1
 
@@ -122,6 +135,18 @@ class AlkulukuGeneroija():
         return self.onko_yhdistetty_luku(mahdollinen_alkuluku, _d, _s)
 
     def onko_yhdistetty_luku(self, testattava_luku, _d, _s):
+
+        """
+        Metodi toteuttaa osan Miller-Rabinin algoritmista
+
+        Testaa onko testattavalla luvulla alkuluvun ominaisuuksia. Testattavan luvun
+        ominaisuuksia testataan oletuksena neljälläkymmenellä eri luvulla.
+
+        Palauttaa:
+            Kokonaisluvun (int), joka on suurella todennäköisyydellä alkuluku
+
+        """
+
         for _ in range(40):
             ylaraja = testattava_luku - 1
             _a = random.randrange(2, ylaraja)
@@ -140,7 +165,21 @@ class AlkulukuGeneroija():
         return testattava_luku
 
     def hae_alkuluku1(self):
+        """
+        Metodi palauttaa luodun alkuluvun
+
+        Palauttaa:
+            Kokonaisluvun (int), joka on suurella todennäköisyydellä alkuluku
+
+        """
         return self.alkuluku1
 
     def hae_alkuluku2(self):
+        """
+        Metodi palauttaa luodun alkuluvun
+
+        Palauttaa:
+            Kokonaisluvun (int), joka on suurella todennäköisyydellä alkuluku
+
+        """
         return self.alkuluku2
