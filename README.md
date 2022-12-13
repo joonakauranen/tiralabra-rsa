@@ -6,7 +6,7 @@
 
 [Toteutusdokumentti](https://github.com/joonakauranen/tiralabra-rsa/blob/main/dokumentaatio/toteutusdokumentti.md)
 
-[Käyttöohje](https://github.com/joonakauranen/tiralabra-rsa/edit/main/dokumentaatio/kayttoohje.md)
+[Käyttöohje](https://github.com/joonakauranen/tiralabra-rsa/blob/main/dokumentaatio/kayttoohje.md)
 
 ## Viikkoraportit
 
