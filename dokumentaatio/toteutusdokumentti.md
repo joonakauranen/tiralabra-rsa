@@ -38,3 +38,9 @@ Kuten edellisessä kohdassa on näytetty RSA:n toiminta perustuu modulaariseen p
 Kun k on moduluksen bittien määrä on RSA-algoritmin julkisen avaimen operaatioiden aikavaativuus O(k2), salaisen avaimen operaatioiden aikavaativuus O(k3) ja avainten luomisen aikavaativuus O(k4).
 
 Lähde: [RSA labs](https://web.archive.org/web/20071112103441/http://www.rsa.com/rsalabs/node.asp?id=2215)
+
+### Muuta
+
+UTF-8 -koodaus toimii, mutta se rajoittaa viestin pituutta. Jos ohjelma kaatuu Integer -> String muunnokseen voi silloin yrittää käyttää suurempia avaimia. Joidenkin merkkien koodamiseen käytetään kuitenkin jopa neljää tavua, joten avainten koon kasvattaminen ei ole hyvä loppullinen ratkaisu. Merkkijonon voisi pilkkoa osiin, mutta sitä ei tämän projektin yhteydessä ole toteutettu. Mielestäni voi todeta, että pidempien merkkijonojen salaamisen on parempi käyttää jotain muuta algoritmia.
+
+Toisena puutteena suoritettava tiedosto ja release puuttuu. PyPi-paketin julkaisu vaikutti järkevimmältä vaihtoehdolta GitHub releasea varten, mutta en näe tämän projektin PyPissä julkaisemisen olevan kovin hyödyllistä. Projektia voi testata [käyttöohjeen](https://github.com/joonakauranen/tiralabra-rsa/blob/main/dokumentaatio/kayttoohje.md) mukaisesti.
