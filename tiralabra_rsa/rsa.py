@@ -20,6 +20,7 @@ class RSA:
 
         julkinen_eksponentti, modulo = self.julkinen_avain
 
+        #jätin oman ratkaisun näkyviin vaikka pythonin oma on nopeampi
         #salattu_merkkijono = (merkkijono ** julkinen_eksponentti) % modulo
 
         salattu_merkkijono = pow(merkkijono, julkinen_eksponentti, modulo)
@@ -40,6 +41,7 @@ class RSA:
 
         salattu_eksponentti, modulo = self.salattu_avain
 
+        #jätin oman ratkaisun näkyviin vaikka pythonin oma on nopeampi
         #purettu_merkkijono = (merkkijono ** salattu_eksponentti) % modulo
 
         purettu_merkkijono = pow(merkkijono, salattu_eksponentti, modulo)

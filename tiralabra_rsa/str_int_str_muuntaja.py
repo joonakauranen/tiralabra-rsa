@@ -1,4 +1,5 @@
 import binascii
+import codecs
 
 class StrIntStrMuuntaja():
 
@@ -37,7 +38,9 @@ class StrIntStrMuuntaja():
         """
         hexa = hex(kokonaisluku)
         hex_ilman_etuliitetta = hexa[2:]
-        byt = bytes.fromhex(hex_ilman_etuliitetta)
+        print(hex_ilman_etuliitetta)
+        hex_ilman_etuliitetta = hex_ilman_etuliitetta.strip()
+        byt = codecs.decode(hex_ilman_etuliitetta,"hex")
         merkkijono = byt.decode('utf-8')
 
         return merkkijono
