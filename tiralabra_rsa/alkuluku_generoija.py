@@ -116,7 +116,7 @@ class AlkulukuGeneroija():
         """
         Metodi toteuttaa osan Miller-Rabinin algoritmista
 
-        Testaa onko testattavalla luvulla alkuluvun ominaisuuksia
+        Testaa onko testattavalla luvulla alkuluvun ominaisuuksia.
 
         Palauttaa:
             Kokonaisluvun (int), joka on potentiaalinen alkuluku
