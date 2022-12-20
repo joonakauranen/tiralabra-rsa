@@ -17,8 +17,8 @@ class Kayttoliittyma:
     def kaynnista(self):
         print("***RSA-salaus***")
         while True:
-            komento = input("Paina 'x' jos haluat lopettaa, mitä tahansa muuta jos haluat jatkaa")
-            
+            komento = input("Paina 'x' jos haluat lopettaa, mitä tahansa muuta jatkaaksesi")
+
             if komento == "x":
                 break
 
