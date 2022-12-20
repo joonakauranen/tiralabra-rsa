@@ -23,8 +23,8 @@ class Kayttoliittyma:
                 break
 
             salattava_merkkijono = input("Syötä salattava merkkijono: ")
-            merkkijono_kokonaislukuna = self.muuntaja.merkkijono_kokonaisluvuksi(salattava_merkkijono)
-            salattu_merkkijono = self.rsa.salaa_merkkijono(merkkijono_kokonaislukuna)
+            merkkijono_koklukuna = self.muuntaja.merkkijono_kokonaisluvuksi(salattava_merkkijono)
+            salattu_merkkijono = self.rsa.salaa_merkkijono(merkkijono_koklukuna)
             print("")
             print("Syöte salattuna:")
             print(salattu_merkkijono)
